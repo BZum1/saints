@@ -1,0 +1,84 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'David Libre', serif; }
+
+p {
+  font-family: 'David Libre', serif; }
+
+#titlebar {
+  padding: 40px 0; }
+
+#titlebar h1 {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+#header {
+  background: #17bb77; }
+
+#wineposts {
+  padding: 40px 0; }
+
+.bottle {
+  padding: 20px;
+  background: #f7f7f7; }
+  .bottle h3 {
+    font-size: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0 -20px 10px;
+    padding: 0 20px 10px; }
+  .bottle p {
+    margin-bottom: 0; }
+  .bottle.color-white {
+    border-top: 4px solid #fde300; }
+  .bottle.color-red {
+    border-top: 4px solid #ea3325; }
+  .bottle.color-rose {
+    border-top: 4px solid #e91e63; }
+
+.bottle-rate {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: #f7f7f7;
+  border-top: 1px solid #dcdcdc; }
+  .bottle-rate .fa {
+    margin-right: 3px;
+    color: #ff5722; }
+  .bottle-rate p {
+    margin: 0; }
+
+.bottle-description p {
+  font-style: italic; }
+
+.pp-icon {
+  float: right; }
+  .pp-icon .fa {
+    color: #17bb77; }
+
+.filtering-buttons {
+  padding: 40px 0 0;
+  text-align: center; }
+  .filtering-buttons .btn {
+    margin: 0 8px; }
+
+.hidden {
+  display: none; }
+
+.shown {
+  display: block; }
+
+.btn .fa {
+  margin-right: 4px; }
+
+.btn-success {
+  background-color: #17bb77;
+  border-color: #17bb77; }
+  .btn-success:hover {
+    background-color: #149a63;
+    border-color: #149a63; }
+
+.btn-outline-success {
+  border-color: #17bb77; }
+  .btn-outline-success:hover {
+    background-color: #149a63;
+    border-color: #149a63; }
