@@ -1,0 +1,25 @@
+###########
+# site.title
+
+title:    'Catholic Saints'
+subtitle: 'Saint of the Day'
+
+
+nav:
+- { title: 'Welcome',              href: '/' }
+- { title: 'Page Two',             href: '/two.html' }
+- { title: 'Page Three',           href: '/three.html' }
+
+
+#########################
+# more settings
+
+markdown: kramdown
+
+sass:
+  sass_dir: css
+  style:    expanded
+
+exclude:
+- README.md
+- LICENSE.md
