@@ -17,6 +17,12 @@
 	<meta name="robots" content="noodp"/>
 
   <script src="js/bootstrap.min.js"></script>
+{% if page.url == "/saints.html" %}
   <script src="js/custom.js"></script>
+{% endif %}
+
+{% if page.url == "/" %}
+  <script src="js/saintoftheday.js"></script>
+{% endif %}
 
 </head>
