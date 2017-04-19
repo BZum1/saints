@@ -82,3 +82,28 @@ p {
   .btn-outline-success:hover {
     background-color: #149a63;
     border-color: #149a63; }
+
+#saintWrapper {
+  background-image: url("http://winereview.wpengine.com/wp-content/uploads/saintbg1.jpg");
+  background-size: cover;
+  position: relative;
+  background-position: center; }
+  #saintWrapper .view-all {
+    position: absolute;
+    bottom: 30px;
+    right: 30px; }
+
+#saintToday {
+  position: absolute;
+  top: 100px;
+  right: 50px; }
+  #saintToday h1 {
+    color: #fff;
+    font-size: 3em;
+    text-align: center; }
+  #saintToday p {
+    color: #e6a868;
+    font-size: 1.3em;
+    text-align: center; }
+    #saintToday p span {
+      color: rgba(255, 255, 255, 0.52); }
