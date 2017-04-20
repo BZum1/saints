@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$.ajax({
 		type: "GET",
-		url: 'https://winereview.wpengine.com/wp-json/wp/v2/posts/',
+		url: 'https://saint.wpengine.com/wp-json/wp/v2/saint/',
 		dataType: 'json',
 			error: function() {
 			alert( 'Unable to load posts.' );
@@ -43,7 +43,6 @@ $(document).ready(function() {
 				newBottle += styleBlock;
         newBottle += '<h3>' + post.title.rendered + '</h3>';
         newBottle += '<p>' + post.acf.month + ' ' + post.acf.day + '</p>';
-				newBottle += '<div class="bottle-description">' + post.content.rendered + '</div>';
 
         newBottle += '</div></div>';
 
