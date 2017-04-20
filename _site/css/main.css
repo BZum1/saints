@@ -107,3 +107,30 @@ p {
     text-align: center; }
     #saintToday p span {
       color: rgba(255, 255, 255, 0.52); }
+
+.navbar {
+  background: #17bb77; }
+  .navbar .navbar-brand {
+    color: #fff;
+    font-family: 'David Libre', serif;
+    font-size: 30px; }
+
+.btn-main {
+  color: #fff;
+  background-color: #149a63;
+  border-color: #149a63; }
+  .btn-main:hover {
+    color: #fff;
+    background-color: #04613b;
+    border-color: #04613b; }
+
+.saint-item p {
+  margin-bottom: 4px; }
+.saint-item span {
+  float: right; }
+
+.titleOne {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  width: 100%;
+  text-align: center; }

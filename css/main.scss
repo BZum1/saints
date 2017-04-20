@@ -20,6 +20,8 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+$green: #17bb77;
+
 // Width of the content area
 $content-width:    800px;
 
@@ -169,4 +171,40 @@ p {
       color: rgba(255, 255, 255, 0.52);
     }
   }
+}
+
+.navbar {
+  background: $green;
+  .navbar-brand {
+    color: #fff;
+    font-family: 'David Libre', serif;
+    font-size: 30px;
+  }
+}
+
+.btn-main {
+  color: #fff;
+  background-color: #149a63;
+  border-color: #149a63;
+  &:hover {
+    color: #fff;
+    background-color: #04613b;
+    border-color: #04613b;
+  }
+}
+
+.saint-item {
+  p {
+    margin-bottom: 4px;
+  }
+  span {
+    float: right;
+  }
+}
+
+.titleOne {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
