@@ -108,12 +108,14 @@ p {
     #saintToday p span {
       color: rgba(255, 255, 255, 0.52); }
 
-.navbar {
+#nav-wrap {
   background: #17bb77; }
-  .navbar .navbar-brand {
-    color: #fff;
-    font-family: 'David Libre', serif;
-    font-size: 30px; }
+  #nav-wrap .navbar {
+    background: transparent; }
+    #nav-wrap .navbar .navbar-brand {
+      color: #fff;
+      font-family: 'David Libre', serif;
+      font-size: 30px; }
 
 .btn-main {
   color: #fff;
@@ -149,3 +151,14 @@ p {
   bottom: 0;
   top: 0;
   padding-top: 100px; }
+
+@media (max-width: 767px) {
+  #saintToday {
+    right: 0;
+    background: rgba(0, 0, 0, 0.4); }
+
+  #nav-wrap .btn-main {
+    margin: 10px !important; }
+
+  #saintWrapper .view-all {
+    background: #000; } }

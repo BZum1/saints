@@ -173,12 +173,15 @@ p {
   }
 }
 
-.navbar {
+#nav-wrap {
   background: $green;
-  .navbar-brand {
-    color: #fff;
-    font-family: 'David Libre', serif;
-    font-size: 30px;
+  .navbar {
+    background: transparent;
+    .navbar-brand {
+      color: #fff;
+      font-family: 'David Libre', serif;
+      font-size: 30px;
+    }
   }
 }
 
@@ -226,5 +229,20 @@ p {
     bottom: 0;
     top: 0;
     padding-top: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  #saintToday {
+    right: 0;
+    background: rgba(0,0,0,0.4);
+  }
+  #nav-wrap {
+    .btn-main {
+      margin: 10px !important;
+    }
+  }
+  #saintWrapper .view-all {
+    background: #000;
   }
 }
