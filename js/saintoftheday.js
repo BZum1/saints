@@ -9,7 +9,7 @@ $(document).ready(function() {
   setWindowHeight();
 	$.ajax({
 		type: "GET",
-		url: 'https://winereview.wpengine.com/wp-json/wp/v2/posts?per_page=1&filter[monthnum]=4&filter[day]=19',
+		url: 'https://winereview.wpengine.com/wp-json/wp/v2/posts?per_page=1&filter[monthnum]=4&filter[day]=20',
 		dataType: 'json',
 			error: function() {
 			alert( 'No Saint Today!' );
