@@ -1,7 +1,17 @@
+$(document).ajaxStart(function(){
+    $("#wait").css("display", "block");
+});
+
+$(document).ajaxComplete(function(){
+    $("#wait").css("display", "none");
+});
+
 $(document).ready(function() {
 	$.ajax({
 		type: "GET",
 		url: 'https://saint.wpengine.com/wp-json/wp/v2/saint?filter[orderby]=title&filter[order]=asc',
+    cache: false,
+    crossDomain: true,
 		dataType: 'json',
 			error: function() {
 			alert( 'Unable to load posts.' );

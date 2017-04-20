@@ -1,8 +1,0 @@
-# Site Settings
-title: Wine Review
-# Build Settings
-sass:
-  sass_dir: _sass
-include: ['_pages']
-kramdown:
-  input: GFM

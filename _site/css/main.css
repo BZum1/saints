@@ -134,3 +134,18 @@ p {
   display: block;
   width: 100%;
   text-align: center; }
+
+#wait {
+  width: 100%; }
+  #wait img {
+    margin: 0 auto;
+    padding: 10px 0;
+    display: block; }
+
+#saintWrapper #wait {
+  background: black;
+  position: absolute;
+  z-index: 5000;
+  bottom: 0;
+  top: 0;
+  padding-top: 100px; }

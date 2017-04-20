@@ -208,3 +208,23 @@ p {
   width: 100%;
   text-align: center;
 }
+
+#wait {
+  width: 100%;
+  img {
+    margin: 0 auto;
+    padding: 10px 0;
+    display: block;
+  }
+}
+
+#saintWrapper {
+  #wait {
+    background: rgba(0,0,0,1);
+    position: absolute;
+    z-index: 5000;
+    bottom: 0;
+    top: 0;
+    padding-top: 100px;
+  }
+}

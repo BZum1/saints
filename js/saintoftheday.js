@@ -1,3 +1,11 @@
+$(document).ajaxStart(function(){
+    $("#wait").css("display", "block");
+});
+
+$(document).ajaxComplete(function(){
+    $("#wait").css("display", "none");
+});
+
 function setWindowHeight(){
     var windowHeight = window.innerHeight;
     var saintWrapper = document.getElementById('saintWrapper');
@@ -15,6 +23,8 @@ $(document).ready(function() {
 	$.ajax({
 		type: "GET",
 		url: 'https://saint.wpengine.com/wp-json/wp/v2/saint?filter[monthnum]=' + month + '&filter[day]=' + day,
+    cache: false,
+    crossDomain: true,
 		dataType: 'json',
 			error: function() {
 			alert( 'No Saint Today!' );
