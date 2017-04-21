@@ -3,10 +3,12 @@ layout: home
 ---
 
 <section id="saintWrapper">
-  <section id="wait">
-    <img src="{{ 'ring-alt.svg' | relative_url }}">
-  </section>
-  <div id="saintToday" >
+  <div class="filter">
+    <section id="wait">
+      <img src="{{ 'ring-alt.svg' | relative_url }}">
+    </section>
+    <div id="saintToday">
+    </div>
+    <a href="{{ 'saints.html' | relative_url }}"><button type="button" class="view-all btn btn-outline-warning"><i class="fa fa-users"></i> View all Saints</button></a>
   </div>
-  <a href="{{ 'saints.html' | relative_url }}"><button type="button" class="view-all btn btn-outline-warning"><i class="fa fa-users"></i> View all Saints</button></a>
 </section>

@@ -84,10 +84,12 @@ p {
     border-color: #149a63; }
 
 #saintWrapper {
-  background-image: url("https://saint.wpengine.com/wp-content/uploads/saintbg1.jpg");
   background-size: cover;
   position: relative;
   background-position: center; }
+  #saintWrapper .filter {
+    position: relative;
+    height: 100%; }
   #saintWrapper .view-all {
     position: absolute;
     bottom: 30px;
@@ -106,7 +108,7 @@ p {
     font-size: 1.3em;
     text-align: center; }
     #saintToday p span {
-      color: rgba(255, 255, 255, 0.52); }
+      color: #9e9e9e; }
 
 #nav-wrap {
   background: #17bb77; }
@@ -155,6 +157,7 @@ p {
 @media (max-width: 767px) {
   #saintToday {
     right: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.4); }
 
   #nav-wrap .btn-main {
