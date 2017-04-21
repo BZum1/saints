@@ -154,11 +154,16 @@ p {
   top: 0;
   padding-top: 100px; }
 
+.text-content p {
+  font-size: 20px; }
+
 @media (max-width: 767px) {
-  #saintToday {
+  #saintWrapper #saintToday {
     right: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.4); }
+  #saintWrapper.featuredImage #saintToday {
+    background: transparent; }
 
   #nav-wrap .btn-main {
     margin: 10px !important; }

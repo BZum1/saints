@@ -63,6 +63,7 @@ $(document).ready(function() {
           var image = post.acf.image;
           $('#saintWrapper').css('background-image', 'url(' + image + ')');
           $('#saintWrapper .filter').css('background-color', 'rgba(0,0,0,0.7)');
+          $('#saintWrapper').addClass('featuredImage');
         } else {
           $('#saintWrapper').css('background-image', 'url("https://saint.wpengine.com/wp-content/uploads/saintbg1.jpg")');
         }

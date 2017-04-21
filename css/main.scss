@@ -236,11 +236,22 @@ p {
   }
 }
 
+.text-content p {
+  font-size: 20px;
+}
+
 @media (max-width: 767px) {
-  #saintToday {
-    right: 0;
-    left: 0;
-    background: rgba(0,0,0,0.4);
+  #saintWrapper {
+    #saintToday {
+      right: 0;
+      left: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    &.featuredImage {
+      #saintToday {
+        background: transparent;
+      }
+    }
   }
   #nav-wrap {
     .btn-main {
