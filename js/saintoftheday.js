@@ -53,7 +53,7 @@ $(document).ready(function() {
           montharray['12'] = "December";
 
 				saintBox += '<div class="saintInner">';
-        saintBox += '<h1>' + post.title.rendered + '</h1>';
+        saintBox += '<h1>' + post.acf.title + ' ' + post.title.rendered + '</h1>';
         saintBox += '<p>' + montharray[monthnum] + ' ' + daynum + ' <span>Saint of the Day</span></p>';
         saintBox += '</div>';
 
