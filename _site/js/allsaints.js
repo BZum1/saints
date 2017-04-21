@@ -9,7 +9,7 @@ $(document).ajaxComplete(function(){
 $(document).ready(function() {
 	$.ajax({
 		type: "GET",
-		url: 'https://saint.wpengine.com/wp-json/wp/v2/saint?filter[orderby]=title&filter[order]=asc',
+		url: 'https://saint.wpengine.com/wp-json/wp/v2/saint?per_page=100&filter[orderby]=title&filter[order]=asc',
     cache: false,
     crossDomain: true,
 		dataType: 'json',
