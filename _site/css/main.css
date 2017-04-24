@@ -4,6 +4,9 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-family: 'David Libre', serif; }
 
+a:hover, button:hover {
+  cursor: pointer; }
+
 #titlebar {
   padding: 40px 0; }
 
@@ -69,6 +72,9 @@ p {
 
 .btn .fa {
   margin-right: 4px; }
+.btn.btn-center {
+  display: block;
+  margin: 0 auto; }
 
 .btn-success {
   background-color: #17bb77;
@@ -156,6 +162,24 @@ p {
 
 .text-content p {
   font-size: 20px; }
+
+#saintBio {
+  position: absolute;
+  border-top: 7px solid #17bb77;
+  overflow-y: scroll;
+  top: 10%;
+  bottom: 10%;
+  right: 10%;
+  left: 10%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px; }
+  #saintBio h6 {
+    font-size: 20px;
+    font-weight: 700; }
+  #saintBio p {
+    font-size: 18px; }
 
 @media (max-width: 767px) {
   #saintWrapper #saintToday {

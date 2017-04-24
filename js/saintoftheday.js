@@ -33,6 +33,7 @@ $(document).ready(function() {
 			data.forEach(function(post) {
 
         var saintBox = '';
+        var saintBio = '';
 
         var dateunformatted = post.date;
         var monthnum = dateunformatted.substring(5,7);
@@ -55,9 +56,20 @@ $(document).ready(function() {
 				saintBox += '<div class="saintInner">';
         saintBox += '<h1>' + post.acf.title + ' ' + post.title.rendered + '</h1>';
         saintBox += '<p>' + montharray[monthnum] + ' ' + daynum + ' <span>Saint of the Day</span></p>';
+        if(post.acf.text) {
+          saintBox += '<button type="button" class="view-bio btn btn-center btn-success"><i class="fa fa-info-circle"></i> Bio &amp; Reflection</button>';
+        }
         saintBox += '</div>';
 
         document.getElementById('saintToday').innerHTML += saintBox;
+
+        if(post.acf.text) {
+          saintBio += '<div class="container"><h3>' + post.acf.title + ' ' + post.title.rendered + '</h3>';
+          saintBio += '<p>' + post.acf.text + '</p><h6>Reflection</h6><p>' + post.acf.reflection + '</p>';
+          saintBio += '<button type="button" class="close-bio btn btn-center btn-success"><i class="fa fa-times-circle-o"></i> Close</button></div>';
+
+          document.getElementById('saintBio').innerHTML += saintBio;
+        }
 
         if(post.acf.image) {
           var image = post.acf.image;
@@ -67,6 +79,14 @@ $(document).ready(function() {
         } else {
           $('#saintWrapper').css('background-image', 'url("https://saint.wpengine.com/wp-content/uploads/saintbg1.jpg")');
         }
+
+        $('.view-bio').on('click', function(){
+          $("#saintBio").css('display','block');
+        });
+
+        $('.close-bio').on('click', function(){
+          $("#saintBio").css('display','none');
+        });
 
 			});
 		}
