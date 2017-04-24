@@ -275,6 +275,9 @@ a:hover, button:hover {
       right: 0;
       left: 0;
       background: rgba(0,0,0,0.4);
+      h1 {
+        padding: 0 5px;
+      }
     }
     &.featuredImage {
       #saintToday {
@@ -289,5 +292,12 @@ a:hover, button:hover {
   }
   #saintWrapper .view-all {
     background: #000;
+  }
+  #saintBio {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 20px;
   }
 }
