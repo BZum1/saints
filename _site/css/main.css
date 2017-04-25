@@ -4,6 +4,17 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-family: 'David Libre', serif; }
 
+code {
+  font-size: 14px; }
+
+pre {
+  color: #bd4147;
+  background-color: #f7f7f9;
+  padding: 5px; }
+  pre code {
+    font-size: 14px;
+    padding: 0; }
+
 a:hover, button:hover {
   cursor: pointer; }
 
@@ -160,6 +171,12 @@ a:hover, button:hover {
   top: 0;
   padding-top: 100px; }
 
+.text-content h6 {
+  font-size: 20px;
+  border-bottom: 5px solid #17bb77;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 30px; }
 .text-content p {
   font-size: 20px; }
 
@@ -180,6 +197,22 @@ a:hover, button:hover {
     font-weight: 700; }
   #saintBio p {
     font-size: 18px; }
+
+.footer {
+  background: #141414;
+  margin-top: 0;
+  padding: 20px 0;
+  text-align: center; }
+  .footer h6 {
+    font-size: 16px;
+    color: #ccc;
+    font-weight: 400;
+    padding: 15px 0;
+    margin: 0; }
+    .footer h6 .fa {
+      margin-right: 10px; }
+    .footer h6 a {
+      color: #777; }
 
 @media (max-width: 767px) {
   #saintWrapper #saintToday {

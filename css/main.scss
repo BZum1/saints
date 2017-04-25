@@ -36,6 +36,20 @@ p {
   font-family: 'David Libre', serif;
 }
 
+code {
+  font-size: 14px;
+}
+
+pre {
+  color: #bd4147;
+  background-color: #f7f7f9;
+  padding: 5px;
+  code {
+    font-size: 14px;
+    padding: 0;
+  }
+}
+
 a:hover, button:hover {
   cursor: pointer;
 }
@@ -244,8 +258,17 @@ a:hover, button:hover {
   }
 }
 
-.text-content p {
-  font-size: 20px;
+.text-content {
+  h6 {
+    font-size: 20px;
+    border-bottom: 5px solid #17bb77;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 30px;
+  }
+  p {
+    font-size: 20px;
+  }
 }
 
 #saintBio {
@@ -266,6 +289,26 @@ a:hover, button:hover {
   }
   p {
     font-size: 18px;
+  }
+}
+
+.footer {
+  background: #141414;
+  margin-top: 0;
+  padding: 20px 0;
+  text-align: center;
+  h6 {
+    font-size: 16px;
+    color: #ccc;
+    font-weight: 400;
+    padding: 15px 0;
+    margin: 0;
+    .fa {
+      margin-right: 10px;
+    }
+    a {
+      color: #777;
+    }
   }
 }
 

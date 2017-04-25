@@ -86,6 +86,48 @@
     <div class="row justify-content-center">
       <div class="col-12 col-lg-8 text-content">
         <p><strong>Saints.Today</strong> will offer an API to enable you to include saint content directly on your website. API documentation is forthcoming.</p>
+        <h6>GET the Saint of the Day</h6>
+        <p>To retreive the data for the Saint of the Day, a GET request can be made like this:</p>
+        <p><code>https://saint.wpengine.com/wp-json/wp/v2/saint?filter[monthnum]=1&filter[day]=1</code></p>
+        <p>The first "1" in the string (following [monthnum]) should be the number of the month (1-12). The second "1" in the string (following [day]) should be the number of the day. Setting each of these (the month and day) as pre-populated variables, dependent on the current date, will enable you to load the saint of the day each day.</p>
+        <p>Here is an example ajax request, which relies upon JavaScript to first ascertain today's date:</p>
+
+<pre>
+<code>var today = new Date();
+var day = today.getDate();
+var month = today.getMonth();
+month = month + 1; // Because JavaScript months start at 0
+
+$.ajax({
+  type: "GET",
+  url: 'https://saint.wpengine.com/wp-json/wp/v2/saint?filter[monthnum]=' + month + '&filter[day]=' + day,</code>
+</pre>
+        <p>The response to the GET request includes lots of data. Here is a portion of the sample response for April 24:</p>
+
+<pre>
+<code>[
+  {
+  "id": 23,
+  "date": "2016-04-24T12:57:36",
+  "title": {
+    "rendered": "Fidelis Of Sigmaringen"
+  },
+  "acf": {
+    "title": "Saint",
+    "text": "FIDELIS was born at Sigmaringen in 1577, of noble parents. In his youth he frequently approached the sacraments, visited the sick and the poor, and spent moreover many hours before the altar. For a time he followed the legal profession, and was remarkable for his advocacy of the poor and his respectful language towards his opponents. Finding it difficult to become both a rich lawyer and a good Christian, Fidelis entered the Capuchin. Order, and embraced a life of austerity and prayer. Hair shirts, iron-pointed girdles, and disciplines were penances too light for his fervor; and being filled with a desire of martyrdom, he rejoiced at being sent to Switzerland by the newly-founded Congregation of Propaganda, and braved every peril to rescue souls from the diabolical heresy of Calvin. When preaching at Sevis he was fired at by a Calvinist, but the fear of death could not deter him from proclaiming divine truth. After his sermon he was waylaid by a body of Protestants headed by a minister, who attacked him and tried to force him to embrace their so-called. reform. But he said, \"I came to refute your errors, not to embrace them; I will never renounce Catholic doctrine, which is the truth of all ages, and I fear not death.\" On this they fell upon him with their poignards, and the first martyr of Propaganda went to receive his palm.",
+    "reflection": "We delight in decorating the altars of God with flowers, lights, and jewels, and it is right to do so; but if we wish to offer to God gifts of higher value, let us, in imitation of St. Fidelis, save the souls who but for us would be lost; for so we shall offer Him, as it were, the jewels of paradise."
+  },</code>
+</pre>
+        <p>If you set the root element as "post" you'd be able to access the key data points this way:</p>
+
+<pre>
+<code>post.acf.title // Saint name
+post.title.rendered // Saint title (Saint or Saints or Pope Saint)
+post.date // The unformatted date
+post.acf.text // The saint biography
+post.acf.reflection // The saint reflection</code>
+</pre>
+
       </div>
     </div>
   </div>
@@ -93,7 +135,16 @@
 
 		</article>
 	</main>
-	
+	<section class="footer mt-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <h6><i class="fa fa-laptop" aria-hidden="true"></i>Service provided by <a href="https://fiatinsight.com" target="_blank">Fiat Insight</a></h6>
+      </div>
+    </div>
+  </div>
+</section>
+
 </body>
 
 </html>
