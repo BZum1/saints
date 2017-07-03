@@ -28,6 +28,7 @@ $(document).ready(function() {
 		dataType: 'json',
 			error: function() {
 			alert( 'No Saint Today!' );
+      console.log('alert');
 		},
 		success: function(data) {
 			data.forEach(function(post) {

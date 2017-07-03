@@ -231,6 +231,14 @@ a:hover, button:hover {
   }
 }
 
+#allsaints {
+  .saint-item {
+    p:hover {
+      cursor: pointer;
+    }
+  }
+}
+
 .titleOne {
   border-bottom: 1px solid #ddd;
   display: block;
@@ -245,6 +253,17 @@ a:hover, button:hover {
     padding: 10px 0;
     display: block;
   }
+}
+
+.hidethis {
+  opacity: 0;
+  height: 0;
+  visibility: invisible;
+}
+
+#modalWait {
+  text-align: center;
+  margin: 0 0 30px;
 }
 
 #saintWrapper {
