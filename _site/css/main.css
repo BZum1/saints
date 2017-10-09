@@ -145,10 +145,12 @@ a:hover, button:hover {
     background-color: #04613b;
     border-color: #04613b; }
 
-.saint-item p {
-  margin-bottom: 4px; }
-.saint-item span {
-  float: right; }
+.saint-item {
+  clear: both; }
+  .saint-item p {
+    margin-bottom: 4px; }
+  .saint-item span {
+    float: right; }
 
 #allsaints .saint-item p:hover {
   cursor: pointer; }

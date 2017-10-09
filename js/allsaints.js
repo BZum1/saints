@@ -53,6 +53,50 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+	$.ajax({
+		type: "GET",
+		url: 'https://saint.wpengine.com/wp-json/wp/v2/saint?per_page=100&offset=100&filter[orderby]=date&filter[order]=asc',
+    cache: false,
+    crossDomain: true,
+		dataType: 'json',
+			error: function() {
+			alert( 'Uh oh. Error encountered while loading saints. Say a prayer.' );
+		},
+		success: function(data) {
+
+      var montharray = new Array();
+        montharray['01'] = "January";
+        montharray['02'] = "February";
+        montharray['03'] = "March";
+        montharray['04'] = "April";
+        montharray['05'] = "May";
+        montharray['06'] = "June";
+        montharray['07'] = "July";
+        montharray['08'] = "August";
+        montharray['09'] = "September";
+        montharray['10'] = "October";
+        montharray['11'] = "November";
+        montharray['12'] = "December";
+
+			data.forEach(function(post) {
+
+        var saintItem = '';
+        var dateunformatted = post.date;
+        var monthnum = dateunformatted.substring(5,7);
+        var daynum = dateunformatted.substring(8,10);
+
+				saintItem += '<div class="saint-item">';
+        saintItem += '<p data-toggle="modal" data-target="#modalBio" data-saintid="' + post.id + '" data-saintname="' + post.title.rendered + '">' + post.title.rendered + ' <span>' + montharray[monthnum] + ' ' + daynum + '</span></p>';
+        saintItem += '</div>';
+
+        document.getElementById('allsaints').innerHTML += saintItem;
+
+			});
+		}
+	});
+});
+
+$(document).ready(function() {
   $('#modalBio').on('show.bs.modal', function (event) {
 
     $("#wait").addClass('hidethis'); // Hide
